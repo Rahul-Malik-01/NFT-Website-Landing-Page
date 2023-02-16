@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: Folito;
+    font-weight: 400;
+    src: url(fonts/Folito-Regular.woff) format("woff");
+}
+
+@font-face {
+    font-family: Folito;
+    font-weight: 700;
+    src: url(fonts/Folito-Bold.woff) format("woff");
+}

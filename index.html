@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>NFT</title>
+
+    <style>
+        .signupBtnShadow{
+            box-shadow: 0px 20px 13px rgba(10, 192, 94, 0.03), 
+                        0px 8.14815px 6.51852px rgba(56, 56, 56, 0.0392593), 
+                        0px 1.85185px 3.14815px rgba(56, 56, 56, 0.0240741);
+        }
+
+        .discordBtnShadow{
+            box-shadow: 0px 25px 50px rgba(10, 192, 94, 0.1);
+        }
+
+        .boxBgBlur{
+            background: rgba(255, 255, 255, 0.4);
+            border: 0.8875px solid #FFFFFF;
+            box-shadow: 0px 2.6625px 33.725px rgba(0, 0, 0, 0.04);
+            backdrop-filter: blur(4.4375px);
+            border-radius: 7.1px;
+        }
+
+        .boxBgBlur2{
+            background: rgba(255, 255, 255, 0.4);
+            border: 1px solid #FFFFFF;
+            box-shadow: 0px 3px 38px rgba(0, 0, 0, 0.04);
+            backdrop-filter: blur(5px);
+            border-radius: 8px;
+        }
+
+        .circleShadow{
+            box-shadow: 0px 100px 80px rgba(56, 56, 56, 0.1), 
+                        0px 64.8148px 46.8519px rgba(56, 56, 56, 0.0759259), 
+                        0px 38.5185px 25.4815px rgba(56, 56, 56, 0.0607407), 
+                        0px 20px 13px rgba(56, 56, 56, 0.05), 
+                        0px 8.14815px 6.51852px rgba(56, 56, 56, 0.0392593),
+                        0px 1.85185px 3.14815px rgba(56, 56, 56, 0.0240741);
+        }
+
+        .featureCard{
+            background: #FFFFFF;
+            border: 0.5px solid rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.05);
+            border-radius: 20px;
+        }
+
+        /* about us grid box hover */
+        .gridBoxHover:hover{
+            cursor: pointer;
+            background: #FFFFFF;
+            box-shadow: 0px 38.5185px 25.4815px rgba(56, 56, 56, 0.0607407), 
+            0px 20px 13px rgba(56, 56, 56, 0.05), 
+            0px 8.14815px 6.51852px rgba(56, 56, 56, 0.0392593), 
+            0px 1.85185px 3.14815px rgba(56, 56, 56, 0.0240741);    
+        }
+
+        .usersContentBoxShadow{
+            box-shadow: 0px 53.2273px 35.2119px rgba(56, 56, 56, 0.0607407),
+            0px 27.6373px 17.9642px rgba(56, 56, 56, 0.05), 
+            0px 11.2596px 9.0077px rgba(56, 56, 56, 0.0392593), 
+            0px 2.55901px 4.35031px rgba(56, 56, 56, 0.0240741);
+        }
+
+        .quotesFilter{
+            filter: drop-shadow(0px 21.9417px 43.8835px rgba(0, 0, 0, 0.05));
+        }
+
+        .twwitterBtnShadow{
+            filter: drop-shadow(0px 25px 50px rgba(10, 192, 94, 0.1));
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- wrapper -->
+    <div class="overflow-x-hidden overflow-y-auto h-[100vh] px-4">
+
+        <!-- nav section -->
+        <section class="bg-[#FDFDFD] relative">
+            <!-- decorator dots -->
+            <img src="./images/decorator-1.svg" alt=""
+                 class="absolute top-0 left-0">
+            <img src="./images/decorator-2.svg" alt=""
+                 class="absolute left-[376px] top-[127px]">
+
+            <div class="max-w-[1240px] mx-auto flex justify-between items-center pt-[42px]">
+                <!-- left heading -->
+                <h2 class="font-['Poppins'] font-[700] text-[25px] leading-[37px] -tracking-[0.06rem] text-[#09AD55]">
+                    TinyFaces
+                    <span class="text-[#313131]">NFT</span>
+                </h2>
+
+                <!-- nav items -->
+                <ul class="hidden lg:flex gap-[50px] font-['Poppins'] font-[400] text-[18px] leading-[27px] text-[#817C8C]">
+                    <li>
+                        <a href="#" class="hover:text-[#313131] transition-colors duration-200">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:text-[#313131] transition-colors duration-200">
+                            About
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:text-[#313131] transition-colors duration-200">
+                            Features
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:text-[#313131] transition-colors duration-200">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- buttons -->
+                <div class="flex items-center gap-[35px] font-['Poppins'] font-[400] text-[18px] leading-[27px]">
+                    <!-- login button -->
+                    <div class="cursor-pointer hidden lg:block">
+                        <p class="text-[#313131] hover:text-[#0AC05E] transition-colors duration-200">Login</p>
+                    </div>
+                    <!-- sign up button -->
+                    <div class="bg-[#0AC05E] cursor-pointer w-[154px] h-[58px] hidden lg:flex items-center justify-center rounded-[8px] 
+                         hover:font-[500] signupBtnShadow">
+                        <p class="text-[#FAFAFA]">Sign Up</p>
+                    </div>
+                    <div class="text-center text-2xl block lg:hidden pr-4">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- hero section -->
+        <section class="bg-[#FDFDFD]">
+            <div class="max-w-[1240px] mx-auto flex justify-center items-center pt-0 lg:pt-[74px] gap-[26px]">
+                <!-- left part -->
+                <div class="flex flex-col gap-[34px] w-full lg:w-[711px] pt-[30px] pb-[70px]">
+                    <h2 class="font-['Poppins'] font-[700] text-[50px] md:text-[70px] leading-[100%] text-[#0AC05E]">Find 
+                        <span class="text-[#313131]">Your Favourite</span> 
+                        Character
+                    </h2>
+
+                    <p class="font-['Poppins'] font-[400] text-[16px] leading-[30px] max-w-full md:w-[490px] pb-0 md:pb-[34px]">
+                        Characterised by soft lighting, vintage colour schemes and quirky costumes, these 
+                        generative 3D TinyFaces are the addition to your NFT collection you’ve been waiting for.
+                    </p>
+
+                    <!-- buttons mobile-->
+                    <div class="flex-col md:hidden items-center gap-4">
+                        <!-- discord btn -->
+                        <div class="bg-[#0AC05E] cursor-pointer w-[192px] h-[52px] flex items-center justify-center 
+                             rounded-[9px] discordBtnShadow mb-8">
+                             <a href="#" class="text-[#FFFFFF] font-['Poppins'] font-[500] text-[18px] leading-[32px] 
+                                hover:drop-shadow-xl">
+                                Join Discord
+                            </a>
+                        </div>
+
+                        <!-- demo video btn mobile -->
+                        <div class="bg-[#fff] cursor-pointer w-[192px] h-[52px] flex md:hidden items-center justify-center 
+                             rounded-[9px] discordBtnShadow text-[#0AC05E] border-[1px] border-[#0AC05E] gap-2">
+                             <a href="#" class="font-['Poppins'] font-[500] text-[18px] leading-[32px] 
+                                hover:drop-shadow-xl">
+                                Demo Video
+                            </a>
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+
+                    <!-- buttons desktop-->
+                    <div class="hidden md:flex items-center gap-[46px]">
+                        <!-- discord btn -->
+                        <div class="bg-[#0AC05E] cursor-pointer w-[192px] h-[52px] flex items-center justify-center 
+                             rounded-[9px] discordBtnShadow">
+                             <a href="#" class="text-[#FFFFFF] font-['Poppins'] font-[500] text-[18px] leading-[32px] 
+                                hover:drop-shadow-xl">
+                                Join Discord
+                            </a>
+                        </div>
+
+                        <!-- demo video btn desktop -->
+                        <div class="relative flex items-center cursor-pointer">
+                            <p class="font-['Poppins'] font-[500] text-[18px] leading-[27px] text-[#0AC05E] z-20`">Demo video</p>
+                            <img src="./images/play-btn-circle.svg" alt=""
+                                 class="absolute left-[80px]">
+                            <img src="./images/play-btn.svg" alt=""
+                                 class="absolute left-[120px] hover:scale-110 transition-transform duration-200">
+                        </div>
+                    </div>
+                </div>
+                <!-- right part desktop-->
+                <div class="relative hidden lg:block">
+                    <div class="bg-[#0ac05e1f] w-[503px] h-[541px] rounded-b-[15px] rounded-tr-[216px]">
+                        <img src="./images/avatar-1-hero.svg" alt=""
+                             class="w-[477px] absolute top-[40px] left-[13px] z-20">
+                    </div>
+
+                    <!-- 3000+ section -->
+                    <div class="absolute left-[307px] top-[319px] z-30">
+                        <div class="boxBgBlur w-[167px] h-[213px] relative">
+                            <img src="./images/profile-img-circle.svg" alt=""
+                                 class="absolute -top-[16.86px] -right-[18.64px] border border-white rounded-full">
+                            <div class="flex flex-col justify-center items-center pt-[27.51px] gap-[23.34px]">
+                                <p class="font-['inter'] font-[600] text-[18px] leading-[22px] text-center w-[112px]">
+                                    Secure The Most Rare
+                                </p>
+                                <div class="flex flex-col gap-[6px] items-center justify-center bg-white rounded-[7px] w-[137px] h-[84px]">
+                                    <h3 class="font-['inter'] font-[700] text-[27px] leading-[32px] text-[#FF4D4A]">3,000+</h3>
+                                    <p class="font-['inter'] font-[500] text-[11px] leading-[13px]">New Tiny Faces Arrives</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 202k section -->
+                    <div class="absolute left-[25px] top-[27px] circleShadow w-[16px] h-[16px] rounded-full bg-[#0AC05E] p-[8px] border-[6px] border-white z-40"></div>
+                    <div class="absolute boxBgBlur2 z-30 left-[35px] top-[39px] w-[209px] pl-[21px]">
+                        
+                        <div class="flex flex-row gap-[12px] justify-center items-center">
+                            <p class="font-['Poppins'] font-[500] text-[40px] leading-[60px] text-[#FF4D4A]">202k</p>
+                            <p class="font-['Poppins'] font-[500] text-[12px] leading-[14px] text-[#313131]">Unique TinyFaces</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- features section -->
+        <section class="bg-[#FDFDFD]">
+            <div class="max-w-[1056px] mx-auto pt-0 md:pt-8 lg:pt-[146px] flex flex-col items-center">
+                <h2 class="font-['Poppins'] font-[700] text-[44px] text-left md:text-center leading-[55px] text-[#2D3134] max-w-full md:w-[496px] mb-[30px]">
+                    Thousand Of 
+                    <span class="text-[#0AC05E]">Features</span> 
+                    Awaiting for you
+                </h2>
+                <p class="font-['inter'] font-[300] text-left md:text-center text-[22px] leading-[32px] text-[#676A6C] mb-0 md:mb-2 lg:mb-[140px] max-w-full md:w-[908px]">
+                    Characterised by soft lighting, vintage colour schemes and quirky costumes, these generative 3D 
+                    TinyFaces are the addition to your NFT collection you’ve been waiting for.
+                </p>
+
+                <!-- cards -->
+                <div class="flex flex-col md:items-center md:justify-center md:flex-row md:flex-wrap lg:flex-nowrap gap-[45px]">
+                    <!-- card-1 -->
+                    <div class="featureCard w-[322px] min-h-[364px] flex flex-col p-[28px] gap-[23px] justify-center items-center mt-[80px]">
+                        <div class="w-[100px] h-[100px] rounded-full bg-[#DAF6E7] flex justify-center items-center">
+                            <img src="./images/feature-card-1.svg" alt=""
+                                 class="w-[46.29px] h-[72px]">
+                        </div>
+                        <h3 class="font-['Folito'] font-[700] text-[24px] leading-[28px] text-[#272D4E] 
+                            text-center tracking-[0.5px]">
+                            Unique <br> TinyFaces
+                        </h3>
+                        <p class="font-['Folito'] font-[400] text-[16px] leading-[24px] text-[#7D7987] text-center tracking-[0.5px]">
+                            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet.
+                        </p>
+
+                        <div>
+                            <a href="#" class="font-['Folito'] font-[400] text-[16px] leading-[24px] text-[#089047] flex gap-[8px] justify-center items-center">
+                                Find out more
+                                <i class="fa-sharp fa-solid fa-arrow-right-long"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- card-2 -->
+                    <div class="featureCard w-[322px] min-h-[364px] flex flex-col p-[28px] gap-[23px] justify-center items-center
+                         mb-0 md:mb-0 md:mt-[80px] lg:mb-[80px]">
+                        <div class="w-[100px] h-[100px] rounded-full bg-[#DAF6E7] flex justify-center items-center">
+                            <img src="./images/feature-card-2.svg" alt=""
+                                 class="w-[58px] h-[58px]">
+                        </div>
+                        <h3 class="font-['Folito'] font-[700] text-[24px] leading-[28px] text-[#272D4E] 
+                            text-center tracking-[0.5px]">
+                            Huge <br> Special Accessories
+                        </h3>
+                        <p class="font-['Folito'] font-[400] text-[16px] leading-[24px] text-[#7D7987] text-center tracking-[0.5px]">
+                            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet.
+                        </p>
+
+                        <div>
+                            <a href="#" class="font-['Folito'] font-[400] text-[16px] leading-[24px] text-[#089047] flex gap-[8px] justify-center items-center">
+                                Find out more
+                                <i class="fa-sharp fa-solid fa-arrow-right-long"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- card-3 -->
+                    <div class="featureCard w-[322px] min-h-[364px] flex flex-col p-[28px] gap-[23px] justify-center items-center mt-0 md:mt-0 lg:mt-[80px]">
+                        <div class="w-[100px] h-[100px] rounded-full bg-[#DAF6E7] flex justify-center items-center">
+                            <img src="./images/feature-card-3.svg" alt=""
+                                 class="w-[58px] h-[58px]">
+                        </div>
+                        <h3 class="font-['Folito'] font-[700] text-[24px] leading-[28px] text-[#272D4E] 
+                            text-center tracking-[0.5px]">
+                            500+ <br> Combinations
+                        </h3>
+                        <p class="font-['Folito'] font-[400] text-[16px] leading-[24px] text-[#7D7987] text-center tracking-[0.5px]">
+                            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet.
+                        </p>
+
+                        <div>
+                            <a href="#" class="font-['Folito'] font-[400] text-[16px] leading-[24px] text-[#089047] flex gap-[8px] justify-center items-center">
+                                Find out more
+                                <i class="fa-sharp fa-solid fa-arrow-right-long"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- recently added section -->
+        <section class="bg-[#FDFDFD]">
+            <div class="max-w-[1241px] mx-auto pt-[60px] lg:pt-[146px] flex flex-col justify-center items-center gap-[60px]">
+                <!-- text part -->
+                <div class="flex flex-col gap-[30px]">
+                    <h2 class="text-left md:text-center font-['Poppins'] font-[700] text-[44px] leading-[40px] text-[#0AC05E]">
+                        Recently <span class="text-[#2D3134]">Added</span>
+                    </h2>
+                    <p class="text-left md:text-center max-w-full lg:w-[908px] font-['inter'] font-[300] text-[22px] leading-[32px] text-[#676A6C]">
+                        Characterised by soft lighting, vintage colour schemes and quirky costumes, these 
+                        generative 3D TinyFaces are the addition to your NFT collection you’ve been waiting for.
+                    </p>
+                </div>
+
+                <!-- images part -->
+                <div class="flex flex-wrap md:flex-wrap lg:flex-row lg:flex-nowrap justify-center items-center gap-[40px]">
+                    <div class="w-[300px] md:w-[387px] h-[340px] md:h-[439px] bg-[#D9B7B4] rounded-[10px] relative">
+                        <img src="./images/recently-added-avatar-1.svg" alt=""
+                             class="absolute bottom-0">
+                    </div>
+                    <div class="w-[300px] md:w-[387px] h-[340px] md:h-[439px] bg-[#B7B5D9] rounded-[10px] relative">
+                        <img src="./images/recently-added-avatar-2.svg" alt=""
+                             class="absolute bottom-0">
+                    </div>
+                    <div class="w-[300px] md:w-[387px] h-[340px] md:h-[439px] bg-[#D2E4E5] rounded-[10px] relative overflow-hidden">
+                        <img src="./images/recently-added-avatar-3.svg" alt=""
+                             class="absolute -bottom-2">
+                    </div>
+                </div>
+
+                <!-- arrows -->
+                <div class="hidden lg:flex flex-row w-[120px] h-[66px] bg-[#fff] shadow-lg items-center justify-center">
+                    <div class="w-[50px] h-[50px] bg-[#fff] flex items-center justify-center text-[#96B0B8] text-[22px]">
+                        <a href="#">
+                            <i class="fa-sharp fa-solid fa-arrow-left-long"></i>
+                        </a>
+                    </div>
+                    <div class="w-[50px] h-[50px] bg-[#0AC05E] flex items-center justify-center text-[#FFFFFF] text-[22px]">
+                        <a href="#">
+                            <i class="fa-sharp fa-solid fa-arrow-right-long"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- section-1 -->
+        <section class="bg-[#FDFDFD]">
+            <div class="flex flex-row justify-center items-center text-left md:text-center xl:text-left max-w-[1240px] mx-auto gap-[90px] pt-[60px] lg:pt-[146px]">
+                <!-- left part -->
+                <div class="w-[731px] flex flex-col gap-[30px]">
+                    <h2 class="font-['Poppins'] font-[700] text-[44px] leading-[40px] text-[#2D3134]">
+                        <span class="text-[#0AC05E]">5000+</span> Unique TinyFaces
+                    </h2>
+                    <p class="font-['inter'] font-[300] text-[22px] leading-[32px] text-[#676A6C]">
+                        Each character is entirely unique and is generated by combining hundreds of 
+                        attributes such as colour palettes, skin tones, facial traits, outfits and accessories. With nearly endless combinations, all characters are guaranteed to be one of a kind.
+                    </p>
+                </div>
+
+                <!-- right part -->
+                <div class="hidden xl:block w-[419px] h-[418px] bg-[#B6B6B680] rounded-tl-[209px] relative">
+                    <img src="./images/section-1-avatar.svg" alt="" width="364px"
+                         class="absolute bottom-0 right-0">
+                </div>
+            </div>
+        </section>
+
+        <!-- section-2 -->
+        <section class="bg-[#FDFDFD]">
+            <div class="flex flex-row-reverse justify-center items-center text-left md:text-center xl:text-left max-w-[1240px] mx-auto gap-[40px] pt-[60px] lg:pt-[146px]">
+                <!-- left part -->
+                <div class="w-[781px] flex flex-col gap-[30px]">
+                    <h2 class="font-['Poppins'] font-[700] text-[44px] leading-[40px] text-[#2D3134]">
+                        <span class="text-[#0AC05E]">Secure</span> The Most Rare
+                    </h2>
+                    <p class="font-['inter'] font-[300] text-[22px] leading-[32px] text-[#676A6C]">
+                        Even though no two Tinyfaces will ever be the same, some variations are rarer than others. 
+                        Watch out for special accessories and metal skin tones - the rarer the attributes, the rarer your 
+                        character will be.
+                    </p>
+                </div>
+
+                <!-- right part -->
+                <div class="hidden xl:block w-[419px] h-[418px] bg-[#B6B6B680] rounded-tr-[209px] relative">
+                    <img src="./images/section-2-avatar.svg" alt="" width="336px"
+                         class="absolute bottom-0 left-[60px]">
+                </div>
+            </div>
+        </section>
+
+        <!-- about us section -->
+        <section class="bg-[#FDFDFD]">
+            <div class="flex flex-col items-center max-w-[1240px] mx-auto gap-[30px] xl:gap-[60px] pt-[60px] lg:pt-[146px]">
+                <!-- heading section -->
+                <div class="max-w-full md:w-[908px] md:mx-auto text-left md:text-center flex flex-col gap-[30px]">
+                    <h2 class="font-['Poppins'] font-[700] text-[44px] leading-[40px] text-[#0AC05E]">
+                        About <span class="text-[#313131]">Us</span>
+                    </h2>
+                    <p class="font-['inter'] font-[300] text-[22px] leading-[32px] text-[#676A6C]">
+                        Launched in 2021, TinyFaces is an online design and publishing tool with a mission 
+                        to empower everyone in the world to design anything and publish anywhere.
+                    </p>
+                </div>
+
+                <!-- content section -->
+                <div class="flex flex-col xl:flex-row gap-[60px] xl:gap-[104px]">
+                    <!-- left part -->
+                    <div class="md:w-[712px] flex flex-col gap-[30px] justify-center items-center">
+                        <p class="font-['Folito'] font-[400] text-[16px] leading-[24px] tracking-[0.5px] text-[#7D7987]
+                           text-left md:text-center xl:text-left">
+                            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet.Amet minim mollit non 
+                            deserunt ullamco est sit aliqua dolor do amet.Amet minim mollit non deserunt ullamco est sit 
+                            aliqua dolor do amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet.Amet 
+                            minim mollit non deserunt ullamco est sit aliqua dolor do amet.Amet minim mollit non deserunt
+                            ullamco est sit aliqua dolor do amet.Amet minim mollit non deserunt ullamco est sit aliqua 
+                            dolor do amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do ameAmet 
+                            minim mollit non deserunt ullamco est sit aliqua dolor do amet.t.
+                        </p>
+
+                        <!-- buttons -->
+                        <div class="flex flex-col md:flex-row justify-center items-center xl:justify-start gap-[40px]">
+                            <!-- learn more button -->
+                            <div class="bg-[#0AC05E] cursor-pointer w-[180px] h-[52px] flex items-center justify-center 
+                                rounded-[9px] discordBtnShadow">
+                                <a href="#" class="text-[#FFFFFF] font-['Poppins'] font-[500] text-[18px] leading-[32px] 
+                                   hover:drop-shadow-xl">
+                                    Learn More
+                                </a>
+                            </div>
+
+                            <!-- watch video button -->
+                            <div class="bg-[#fff] cursor-pointer w-[180px] sm:w-[221px] h-[52px] flex items-center justify-center 
+                                rounded-[9px] border-[1px] border-[#0AC05E]">
+                                <a href="#" class="text-[#0AC05E] font-['Poppins'] font-[500] text-[18px] leading-[32px] 
+                                   flex gap-[10px] items-center">
+                                    Watch Video
+                                    <i class="fa-solid fa-play"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- right part -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-[40px] justify-center items-center mx-auto w-fit md:w-[424px]">
+                        <!-- box-1 -->
+                        <div class="w-[192px] h-[161px] bg-[#E0E0E0] flex flex-col items-center justify-center gap-[10px] py-[27px] px-[56px]
+                             gridBoxHover transition-all duration-200">
+                            <h3 class="font-['Poppins'] font-[500] text-[40px] leading-[48px] text-center text-[#313131]">
+                                1000k
+                            </h3>
+                            <p class="font-['Poppins'] font-[400] text-[16px] leading-[24px] -tracking-[0.01em] text-center text-[#313131]">
+                                Design Created
+                            </p>
+                        </div>
+
+                        <!-- box-2 -->
+                        <div class="w-[192px] h-[161px] bg-[#E0E0E0] flex flex-col items-center justify-center gap-[10px] py-[27px] px-[56px]
+                             gridBoxHover transition-all duration-200">
+                            <h3 class="font-['Poppins'] font-[500] text-[40px] leading-[48px] text-center text-[#313131]">
+                                250+
+                            </h3>
+                            <p class="font-['Poppins'] font-[400] text-[16px] leading-[24px] -tracking-[0.01em] text-center text-[#313131]">
+                                International Country
+                            </p>
+                        </div>
+
+                        <!-- box-3 -->
+                        <div class="w-[192px] h-[161px] bg-[#E0E0E0] flex flex-col items-center justify-center gap-[10px] py-[27px] px-[56px]
+                             gridBoxHover transition-all duration-200">
+                            <h3 class="font-['Poppins'] font-[500] text-[40px] leading-[48px] text-center text-[#313131]">
+                                500k
+                            </h3>
+                            <p class="font-['Poppins'] font-[400] text-[16px] leading-[24px] -tracking-[0.01em] text-center text-[#313131]">
+                                Happy Users
+                            </p>
+                        </div>
+
+                        <!-- box-4 -->
+                        <div class="w-[192px] h-[161px] bg-[#E0E0E0] flex flex-col items-center justify-center gap-[10px] py-[27px] px-[56px]
+                             gridBoxHover transition-all duration-200">
+                            <h3 class="font-['Poppins'] font-[500] text-[40px] leading-[48px] text-center text-[#313131]">
+                                2817
+                            </h3>
+                            <p class="font-['Poppins'] font-[400] text-[16px] leading-[24px] -tracking-[0.01em] text-center text-[#313131]">
+                                All Over Language
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- user feedback section -->
+        <section class="bg-[#FDFDFD]">
+            <div class="max-w-[1244px] mx-auto xl:flex flex-row pt-[60px] lg:pt-[146px] gap-[98px]">
+                <!-- left part -->
+                <div class="w-[180px] hidden xl:flex flex-row gap-[20px]">
+                    <div class="flex flex-col justify-center">
+                        <img src="./images/user-left-2.svg" alt=""
+                             width="80px" height="80px">
+                    </div>
+                    
+                    <div class="flex flex-col justify-between">
+                        <img src="./images/user-left-1.svg" alt=""
+                             width="80px" height="80px">
+                        <img src="./images/user-left-3.svg" alt=""
+                             width="80px" height="80px">
+                    </div>
+                </div>
+
+                <!-- middle part -->
+                <div class="flex flex-col gap-[91.5px] items-center justify-center">
+                    <!-- heading section -->
+                    <div class="flex flex-col gap-[24px] text-left sm:text-center">
+                        <h2 class="font-['Poppins'] font-[700] text-[44px] leading-[40px] text-[#0AC05E]">
+                            <span class="text-[#272D4E]">What Our</span> Users Say
+                        </h2>
+                        <p class="font-['inter'] font-[300] text-[22px] leading-[32px] text-[#676A6C] max-w-full md:w-[688px]">
+                            Community development is often linked with community work or community planning, and may involve 
+                            stakeholders, foundations,
+                        </p>
+                    </div>
+
+                    <!-- content section -->
+                    <div class="max-w-full md:w-[688px] flex items-center justify-center relative px-2">
+                        <!-- quotes -->
+                        <div class="w-[72px] h-[72px] bg-[#0AC05E] rounded-full flex items-center justify-center border-[5.75px] 
+                            border-[#fff] absolute -top-[32px] quotesFilter">
+                            <img src="./images/quotes.svg" alt="" width="41.67px">
+                        </div>
+
+                        <!-- content part -->
+                        <div class="max-w-[525px] min-h-[389px] bg-[#fff] rounded-[26px] usersContentBoxShadow px-[44.22px] pb-[44px] pt-[55.27px]">
+                            <!-- stars -->
+                            <div class="pb-[27px] flex flex-row gap-[3.17px] text-[#FBB040]">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <!-- para -->
+                            <p class="max-w-[442.2px] pb-[33px] font-['Folito'] font-[400] text-[22px] leading-[41px] text-[#425466]">
+                                Yet preference connection unpleasant yet melancholy but end appearance. And excellence partiality 
+                                estimating terminated day everything.
+                            </p>
+                            <!-- user name -->
+                            <p class="pb-[7px] font-['Poppins'] font-[600] text-[19px] leading-[29px] text-[#313131]">
+                                Sam
+                            </p>
+                            <!-- userId -->
+                            <p class="font-['Poppins'] font-[400] text-[13px] leading-[13px] text-[#425466]">
+                                @Migelko
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- arrows -->
+                    <div class="flex flex-row w-[120px] h-[66px] bg-[#fff] shadow-lg items-center justify-center -mt-[22px]">
+                        <div class="w-[50px] h-[50px] bg-[#fff] flex items-center justify-center text-[#96B0B8] text-[22px]">
+                            <a href="#">
+                                <i class="fa-sharp fa-solid fa-arrow-left-long"></i>
+                            </a>
+                        </div>
+                        <div class="w-[50px] h-[50px] bg-[#0AC05E] flex items-center justify-center text-[#FFFFFF] text-[22px]">
+                            <a href="#">
+                                <i class="fa-sharp fa-solid fa-arrow-right-long"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- right part -->
+                <div class="w-[180px] hidden xl:flex flex-row gap-[20px]">
+                    <div class="flex flex-col justify-between">
+                        <img src="./images/user-right-1.svg" alt=""
+                             width="80px" height="80px">
+                        <img src="./images/user-right-3.svg" alt=""
+                             width="80px" height="80px">
+                    </div>
+
+                    <div class="flex flex-col justify-center">
+                        <img src="./images/user-right-2.svg" alt=""
+                             width="80px" height="80px">
+                    </div>
+                </div>
+            </div>            
+        </section>
+
+        <!-- join the community -->
+        <section class="bg-[#FDFDFD] pt-[60px] lg:pt-[146px]">
+            <div class="max-w-[1238px] mx-auto flex flex-row justify-center text-left md:text-center xl:text-left xl:justify-between items-center xl:bg-[#F7F7F7]
+                 xl:rounded-tl-[236px] xl:rounded-br-[236px]">
+                <!-- left part -->
+                <div class="hidden xl:block w-[505px] h-[472px] bg-[#DAF6E7] xl:rounded-tl-[236px] relative">
+                    <img src="./images/community-avatar.svg" alt="" width="460.05px" height="452px"
+                         class="absolute left-[29px] bottom-0">
+                </div>
+
+                <!-- right part -->
+                <div class="w-[620px] flex flex-col gap-[30px]">
+                    <h2 class="font-['Poppins'] font-[700] text-[44px] leading-[40px] text-[#272D4E]">
+                        Join The <span class="text-[#0AC05E]">Community</span>
+                    </h2>
+                    <p class="font-['inter'] font-[300] text-[22px] leading-[32px] text-[#676A6C]">
+                        We’re still hiding in the metaverse. While you wait for the collection to drop, join our 
+                        Discord channel or follow us on Twitter keep up to date with our latest work and announcements.
+                    </p>
+
+                    <!-- buttons -->
+                    <div class="flex flex-col md:flex-row justify-center items-center xl:justify-start xl:items-start gap-[40px]">
+                        <!-- join discord button -->
+                        <div class="bg-[#0AC05E] cursor-pointer w-[192px] h-[52px] flex items-center justify-center 
+                            rounded-[9px] discordBtnShadow">
+                            <a href="#" class="text-[#FFFFFF] font-['Poppins'] font-[500] text-[18px] leading-[32px] 
+                            hover:drop-shadow-xl">
+                                Join Discord
+                            </a>
+                        </div>
+
+                        <!-- twitter button -->
+                        <div class="bg-[#fff] cursor-pointer w-[233px] h-[52px] flex items-center justify-center 
+                            rounded-[9px] twitterBtnShadow border-[1px] border-[#0AC05E]">
+                            <a href="#" class="text-[#0AC05E] font-['Poppins'] font-[500] text-[18px] leading-[32px]">
+                                Follow on twitter 
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- footer section -->
+        <section class="bg-[#FDFDFD] pt-[60px] lg:pt-[146px]">
+            <div class="max-w-[1240px] mx-auto">
+                <!-- top part -->
+                <div class="grid grid-cols-1 md:grid-cols-2 px-0 md:px-10 lg:px-20 xl:px-0 xl:flex xl:flex-row justify-between gap-[20px] md:gap-x-[136px] md:gap-y-[20px]
+                     text-center sm:text-left">
+                    <!-- part-1 -->
+                    <div class="flex flex-col gap-[36px]">
+                        <h2 class="font-['Poppins'] font-[700] text-[20px] leading-[24px] text-[#233348]">
+                            TinyFaces.NFT
+                        </h2>
+                        <p class="font-['Poppins'] font-[500] text-[16px] leading-[30px] text-[#425466]">
+                            Nor again is there anyone who loves or pursues or desires to obtain pain of itself.
+                        </p>
+                    </div>
+
+                    <!-- part-2 -->
+                    <div class="flex flex-col gap-[17px]">
+                        <h3 class="font-['Poppins'] font-[500] text-[24px] leading-[36px] text-[#313131]">
+                            About
+                        </h3>
+                        <a href="#" class="font-['Poppins'] font-[500] text-[18px] leading-[36px] text-[#425466]">
+                            Home
+                        </a>
+                        <a href="#" class="font-['Poppins'] font-[500] text-[18px] leading-[36px] text-[#425466]">
+                            Features
+                        </a>
+                        <a href="#" class="font-['Poppins'] font-[500] text-[18px] leading-[36px] text-[#425466]">
+                            FAQs
+                        </a>
+                        <a href="#" class="font-['Poppins'] font-[500] text-[18px] leading-[36px] text-[#425466]">
+                            Reviews
+                        </a>
+                        <a href="#" class="font-['Poppins'] font-[500] text-[18px] leading-[36px] text-[#425466]">
+                            Stories
+                        </a>
+                    </div>
+
+                    <!-- part-3 -->
+                    <div class="flex flex-col gap-[17px]">
+                        <h3 class="font-['Poppins'] font-[500] text-[24px] leading-[36px] text-[#313131]">
+                            Privacy
+                        </h3>
+                        <a href="#" class="font-['Poppins'] font-[500] text-[18px] leading-[36px] text-[#425466]">
+                            Privacy
+                        </a>
+                        <a href="#" class="font-['Poppins'] font-[500] text-[18px] leading-[36px] text-[#425466]">
+                            Policy
+                        </a>
+                        <a href="#" class="font-['Poppins'] font-[500] text-[18px] leading-[36px] text-[#425466]">
+                            Payment
+                        </a>
+                        <a href="#" class="font-['Poppins'] font-[500] text-[18px] leading-[36px] text-[#425466]">
+                            Terms
+                        </a>
+                    </div>
+
+                    <!-- part-4 -->
+                    <div class="flex flex-col gap-[17px]">
+                        <h3 class="font-['Poppins'] font-[500] text-[24px] leading-[36px] text-[#313131]">
+                            Contact Us
+                        </h3>
+                        <p class="font-['Poppins'] font-[500] text-[18px] leading-[36px] text-[#425466]">
+                            +91 9923836502
+                        </p>
+                        <a href="#" class="font-['Poppins'] font-[500] text-[18px] leading-[36px] text-[#425466]">
+                            malikrahul872@gmail.com
+                        </a>
+
+                        <!-- social media -->
+                        <div class="text-[#0AC05E] flex flex-row gap-[18px] text-[34px]">
+                            <a href="https://github.com/Rahul-Malik-01" class="hover:text-[#272D4E] transition-colors duration-200">
+                                <i class="fa-brands fa-square-github"></i>
+                            </a>
+                            <a href="#" class="hover:text-[#272D4E] transition-colors duration-200">
+                                <i class="fa-brands fa-square-instagram"></i>
+                            </a>
+                            <a href="#" class="hover:text-[#272D4E] transition-colors duration-200">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="hover:text-[#272D4E] transition-colors duration-200">
+                                <i class="fa-brands fa-square-facebook"></i>
+                            </a>
+                            <a href="#" class="hover:text-[#272D4E] transition-colors duration-200">
+                                <i class="fa-brands fa-square-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- bottom part -->
+                <div class="flex flex-col sm:flex-row justify-between items-center gap-[10px] text-center sm:text-left mt-[15px] sm:mt-[40px] py-[22px] border-t-[2px] border-[#E0E0E0]">
+                    <!-- left part -->
+                    <div>
+                        <p class="font-['Poppins'] font-[400] text-[16px] leading-[24px] text-[#425466]">
+                            © Copyright 2022 
+                                <span class="font-['Poppins'] font-[600] text-[16px] leading-[24px] text-[#425466]">
+                                    TinyFaces.NFT
+                                </span>
+                            All rights reserved.
+                        </p>
+                    </div>
+                    
+                    <!-- right part -->
+                    <div class="flex flex-row gap-[38px] font-['Poppins'] font-[400] text-[16px] leading-[24px] text-[#425466]">
+                        <a href="#">
+                            Contact Us
+                        </a>
+                        <a href="#">
+                            Terms
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://kit.fontawesome.com/bf80e64e8a.js" crossorigin="anonymous"></script>
+</body>
+</html>
